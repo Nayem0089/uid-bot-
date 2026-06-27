@@ -735,7 +735,19 @@ def main():
         print("[ERROR] Discord Bot Token not found!")
         print("Please set the DISCORD_BOT_TOKEN environment variable or fill the 'token' field in config.json")
         sys.exit(1)
-        
+        import traceback
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+if __name__ == "__main__":
+    try:
+        # আপনার বটের কোড এখানে
+        bot.run(MTQ0ODM0NzY3NTQ2MzM4OTI3NA.Gc_1Dx.vI__k8acMFY6G3-20Dncpsof1Kiivu9S4GMpGc)
+    except Exception as e:
+        print("❌ ERROR:", str(e))
+        print("📋 Full traceback:")
+        traceback.print_exc()
     # Start Keep Alive Server (useful for free hosts like Render, Koyeb, Replit)
     keep_alive()
     
