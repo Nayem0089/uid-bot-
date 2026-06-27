@@ -743,7 +743,7 @@ logging.basicConfig(level=logging.DEBUG)
 if __name__ == "__main__":
     try:
         # আপনার বটের কোড এখানে
-        bot.run(MTQ0ODM0NzY3NTQ2MzM4OTI3NA.Gc_1Dx.vI__k8acMFY6G3-20Dncpsof1Kiivu9S4GMpGc)
+        bot.run("MTQ00DM0NzY3NTQ2MzM4OTI3NA.Gc_1Dx.vI__k8acMFY6G3-20Dncpsof1Kiivu9S4GMpGc")
     except Exception as e:
         print("❌ ERROR:", str(e))
         print("📋 Full traceback:")
