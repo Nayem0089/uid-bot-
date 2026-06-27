@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases
+bot_data.db
+
+# Config containing tokens
+config.json
+
+# IDE / OS files
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
