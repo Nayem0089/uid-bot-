@@ -752,7 +752,37 @@ if __name__ == "__main__":
     keep_alive()
     
     bot.run(token)
+# ============== ১. ইম্পোর্ট সেকশন (১-৫ লাইন) ==============
+import os
+import traceback
+import discord
+from discord.ext import commands
 
+# ============== ২. টোকেন সেটআপ (৭-১০ লাইন) ==============
+TOKEN = os.getenv('DISCORD_TOKEN')
+
+if not TOKEN:
+    raise ValueError("❌ DISCORD_TOKEN environment variable is not set!")
+
+# ============== ৩. বট কনফিগারেশন (১২-১৪ লাইন) ==============
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix='!', intents=intents)
+
+# ============== ৪. ইভেন্ট হ্যান্ডলার (১৬-১৮ লাইন) ==============
+@bot.event
+async def on_ready():
+    print(f'✅ Bot is ready! Logged in as {bot.user}')
+
+# ============== ৫. বট চালানোর কোড (২০-২৬ লাইন) ==============
+try:
+    bot.run(TOKEN)
+except discord.LoginFailure:
+    print("❌ Invalid token! Please check your DISCORD_TOKEN environment variable.")
+    print("💡 Go to Discord Developer Portal and generate a new token.")
+except Exception as e:
+    print(f"❌ Error: {e}")
+    traceback.print_exc()
 if __name__ == "__main__":
     main()
 
