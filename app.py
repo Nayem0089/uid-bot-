@@ -14,7 +14,7 @@ from http.server import SimpleHTTPRequestHandler, HTTPServer
 # CONFIGURATION & PERSISTENCE
 # ==========================================
 DB_FILE = "bot_data.db"
-OWNER_ID = 1501623076704616489  # Bot Owner's Discord ID
+OWNER_ID = 1483537009963434006  # Bot Owner's Discord ID
 
 def init_db():
     """Initializes the database schema if it does not exist."""
