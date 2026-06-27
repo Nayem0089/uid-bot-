@@ -731,7 +731,7 @@ def main():
             print(f"Error loading config.json: {e}")
             
     # Check if token is valid / loaded
-    if not token or token == "MTQ0ODM0NzY3NTQ2MzM4OTI3NA.GdVv0y.lnhGpd71Raok1zuIe0zurJ9rFTDNVk2Ku3H8ks":
+    if not token or token == "MTQ0ODM0NzY3NTQ2MzM4OTI3NA.Gc_1Dx.vI__k8acMFY6G3-20Dncpsof1Kiivu9S4GMpGc":
         print("[ERROR] Discord Bot Token not found!")
         print("Please set the DISCORD_BOT_TOKEN environment variable or fill the 'token' field in config.json")
         sys.exit(1)
